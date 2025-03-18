@@ -1,26 +1,28 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import React from 'react';
+import ProductCard from './components/productcard'; // Importing the ProductCard component
 
-import Productcard from './components/productcard.jsx';
-
-function App() {
-  const cards = Array.from({ length: 10 });
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '16px',
-    padding: '16px',
-  };
+const App = () => {
+  const products = Array.from({ length: 8 }); // Creates 8 product cards
 
   return (
-    <div style={gridStyle}>
-      {cards.map((_, index) => (
-        <Productcard key={index} />
+    <div style={styles.container}>
+      {products.map((_, index) => (
+        <ProductCard key={index} />
       ))}
     </div>
   );
-}
+};
+
+// Styles
+const styles = {
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: '16px',
+    padding: '20px',
+    justifyContent: 'center',
+    backgroundColor: '#f8f9fa',
+  },
+};
 
 export default App;
