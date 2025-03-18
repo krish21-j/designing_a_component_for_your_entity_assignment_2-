@@ -3,7 +3,7 @@ import ViewProductButton from '../components/button'; // Importing the button co
 
 const ProductCard = () => {
   // Static product details
-  const productImage = 'https://via.placeholder.com/150'; 
+  const productImage = 'https://dummyimage.com/150x150/000/fff&text=Product'; 
   const productName = 'Example Product';
   const productPrice = '$100';
 
